@@ -24,7 +24,7 @@ const App = () => {
         headers
       });
       const data = await response.json();
-      await fetch(endpoint, {
+      await fetch("http://localhost:4000/", {
         method: "POST",
         body: data
       });
