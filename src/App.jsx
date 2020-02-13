@@ -5,13 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Metrics from "./Metrics";
 import CandleGraph from "./CandleGraph";
 import { graphShape } from "./functions";
-import {
-  headers,
-  counts,
-  granularities,
-  instruments,
-  prices
-} from "./constants";
+import { counts, granularities, instruments, prices } from "./constants";
+import { headers } from "./connections";
 
 const App = () => {
   const [data, setData] = useState(null);

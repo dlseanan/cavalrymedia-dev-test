@@ -1,14 +1,16 @@
 const express = require("express");
 const mysql = require("mysql");
 
+const config = {
+  host: process.env.REACT_APP_MYSQL_HOST.replace(/'/g, ""),
+  user: process.env.REACT_APP_MYSQL_USER.replace(/'/g, ""),
+  password: process.env.REACT_APP_MYSQL_PASSWORD.replace(/'/g, ""),
+  database: process.env.REACT_APP_MYSQL_DATABASE.replace(/'/g, "")
+};
+
 const app = express();
 const port = 4000;
-var connection = mysql.createConnection({
-  host: "dedi350.flk1.host-h.net",
-  user: "cavalcupjy_29",
-  password: "MsXB7NN5y3n8pIzoXp2I",
-  database: "hades_cavalryapps"
-});
+const connection = mysql.createConnection(config);
 
 connection.connect();
 
@@ -23,4 +25,4 @@ app.post("/", async (req, res) => {
   res.send({ result: "ok" });
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`App listening on port ${port}!`));
