@@ -37,8 +37,6 @@ const App = () => {
     postData();
   }, [data]);
 
-  console.log(data);
-
   const [onlyCompleted, setOnlyCompleted] = useState(true);
 
   const filterCandles = ({ instrument, granularity, candles }) => ({
