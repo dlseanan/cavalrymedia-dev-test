@@ -16,6 +16,7 @@ const App = () => {
   const [count, setCount] = useState("100");
 
   useEffect(() => {
+    setData(null);
     const fetchData = async () => {
       const endpoint = `https://api-fxpractice.oanda.com/v3/instruments/${instrument}/${"candles"}?price=${price}&granularity=${granularity}&count=${count}`;
       const response = await fetch(endpoint, {
