@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import * as d3 from "d3";
-import ez from "d3-ez";
+import ez from "./d3-ez";
 
 const CandleGraph = ({ data }) => {
   useEffect(() => {

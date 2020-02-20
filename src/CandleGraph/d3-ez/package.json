@@ -1,0 +1,90 @@
+{
+  "_args": [
+    [
+      "d3-ez@3.3.15",
+      "/Users/seanan/cavalry-dev-test"
+    ]
+  ],
+  "_from": "d3-ez@3.3.15",
+  "_id": "d3-ez@3.3.15",
+  "_inBundle": false,
+  "_integrity": "sha512-09xRswkHjD3nAOCHAGc4YlVC0Hox3YnOM0XoX9h1eblNsNtYgAlJ7vCpyScte0flHOb9EA+e38IrzstQuiUH9A==",
+  "_location": "/d3-ez",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "d3-ez@3.3.15",
+    "name": "d3-ez",
+    "escapedName": "d3-ez",
+    "rawSpec": "3.3.15",
+    "saveSpec": null,
+    "fetchSpec": "3.3.15"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/d3-ez/-/d3-ez-3.3.15.tgz",
+  "_spec": "3.3.15",
+  "_where": "/Users/seanan/cavalry-dev-test",
+  "author": {
+    "name": "James Saunders",
+    "url": "james@saunders-family.net"
+  },
+  "bugs": {
+    "url": "https://github.com/jamesleesaunders/d3-ez/issues"
+  },
+  "dependencies": {
+    "d3": "^5.9.2"
+  },
+  "description": "D3 Easy Reusable Chart Library",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4.19.1",
+    "gh-pages": "^2.0.1",
+    "jsdoc": "^3.6.0",
+    "jsdom": "^11.12.0",
+    "minami": "^1.2.3",
+    "rollup": "^0.56.2",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-json": "^2.3.1",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.10.2",
+    "toast-jsdoc": "^1.0.2",
+    "uglify-es": "^3.3.9",
+    "vows": "^0.8.2"
+  },
+  "homepage": "http://d3-ez.net",
+  "keywords": [
+    "d3",
+    "d3-module",
+    "visualization",
+    "chart",
+    "graph",
+    "data",
+    "svg",
+    "dataviz"
+  ],
+  "license": "GPL-2.0",
+  "main": "build/d3-ez.js",
+  "module": "index",
+  "name": "d3-ez",
+  "peerDependencies": {
+    "d3": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesleesaunders/d3-ez.git"
+  },
+  "scripts": {
+    "build:docs": "jsdoc -c config/jsdoc.conf.json",
+    "deploy:docs": "npm run build:docs && gh-pages -d docs",
+    "pretest": "make",
+    "test": "tape 'test/**/*Test.js' | tap-spec"
+  },
+  "unpkg": "build/d3-ez.min.js",
+  "version": "3.3.15"
+}
