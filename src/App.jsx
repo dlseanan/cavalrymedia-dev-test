@@ -16,22 +16,28 @@ const App = () => {
   const [count, setCount] = useState("100");
 
   useEffect(() => {
-    setData(null);
     const fetchData = async () => {
       const endpoint = `https://api-fxpractice.oanda.com/v3/instruments/${instrument}/${"candles"}?price=${price}&granularity=${granularity}&count=${count}`;
       const response = await fetch(endpoint, {
         method: "GET",
         headers
       });
-      const data = await response.json();
+      setData(await response.json());
+    };
+    fetchData();
+  }, [count, granularity, instrument, price]);
+
+  useEffect(() => {
+    const postData = async () => {
       await fetch("http://localhost:4000/", {
         method: "POST",
         body: data
       });
-      setData(data);
     };
-    fetchData();
-  }, [count, granularity, instrument, price]);
+    postData();
+  }, [data]);
+
+  console.log(data);
 
   const [onlyCompleted, setOnlyCompleted] = useState(true);
 
